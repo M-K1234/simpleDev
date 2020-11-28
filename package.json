@@ -1,6 +1,6 @@
 {
   "name": "simpledev",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Tool for frontend development",
   "main": "simple-dev.js",
   "scripts": {

@@ -25,9 +25,6 @@ function makeListArray(data = Array[Object] | Object, listID = ''){
         // Checks if data is an array
         if(Array.isArray(data)) {
     
-            // Used to store properties that are specified on Li element
-            let propertiesList = [];
-    
             // Checks if data array contains objects, like in the case of returned data from an API call
             if(data[0] instanceof Object) {
                 
