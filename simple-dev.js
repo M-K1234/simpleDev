@@ -55,7 +55,7 @@ function makeListArray(data = Array[Object] | Object, listID = ''){
                     
                     // Once Li element has been prepared, it is appended as a string to what will
                     // become a larger string of Li elements
-                    generatedListItems+= liChildren.outerHTML.toString();
+                    generatedListItems+= liElement.outerHTML.toString();
                     
                 }
                 
