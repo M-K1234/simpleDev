@@ -21,12 +21,12 @@ your html more readable and easier to manage.
 
 Below are some examples:
 
-## makeList(data, listID)
+## makeListArray(data, listID)
 
 To use, you must provide an array of objects, to the data parameter and specify an
 id for the list that is to be populated. 
 
-IMPORTANT: The chil elements inside the Li element, must have id's that match the names of the
+IMPORTANT: The child elements inside the Li element, must have id's that match the names of the
 properties on the objects in the array, that you want to be added to the html. 
 
 Html
