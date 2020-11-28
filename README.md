@@ -45,7 +45,7 @@ Javascript
 
 let objectArray = [{data1: val1, data2: val2, data3: val3}, ...];
 
-makeList(objectArray, 'list');
+makeListArray(objectArray, 'list');
 ```
 
 NOTE: The documentation is far from complete, but it is going to be updated as 
