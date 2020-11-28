@@ -21,7 +21,7 @@ your html more readable and easier to manage.
 
 Below are some examples:
 
-## makeListArray(data, listID)
+### makeListArray(data, listID)
 
 To use, you must provide an array of objects, to the data parameter and specify an
 id for the list that is to be populated. 

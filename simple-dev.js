@@ -103,27 +103,38 @@ function makeListArray(data = Array[Object] | Object, listID = ''){
  * Can send http requests
  * @param {String} method Request method
  * @param {String} url Request url
+ * @param {Object} options Request headers
+ * @returns {Promise} Returns a promise 
  */
-function sendReq(method, url){
+function sendReq(method, url, options = {}){
 
     // Used to make http requests
     var xhttp = new XMLHttpRequest();
+
+    // Specified header names
+    var headers = Object.keys(options);
 
     // Returns promise. When resolves when request is succesful
     return new Promise((resolve, reject) => {
   
         try {
 
-            // 
             xhttp.onreadystatechange = function() {
     
                 if (this.readyState == 4 && this.status == 200) {
-                    
+           
                     resolve(xhttp);
                 }
             };
 
             xhttp.open(method, url, true);
+
+            if(options !== undefined ) {
+                for(let i = 0;i< headers.length; i++) {
+                    
+                    xhttp.setRequestHeader(headers[i], options[headers[i]]);
+                }
+            }
 
             xhttp.send();
 
@@ -136,7 +147,7 @@ function sendReq(method, url){
   });
 }
  
-function promiseOnClick(id, promise, action) {
+function reqOnClick(id, promise, action) {
 
     if(document.getElementById(id).tagName == 'BUTTON'){
     document.getElementById(id).onclick = (ev) => {
