@@ -48,5 +48,56 @@ let objectArray = [{data1: val1, data2: val2, data3: val3}, ...];
 makeListArray(objectArray, 'list');
 ```
 
+### sendReq(method, url, options) with makeListArray
+
+Simply specify request method, a url and specify options only if needed, if not, you don't
+have to give it a value. 
+
+Below is a real example, with a call to imdb's API:
+
+```
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <script src="./node_modules/simpledev/simple-dev.js"></script>
+    </head>
+    <body>
+
+        <ul id="list">
+            <li>
+                <p id="Title"></p>
+            </li>
+        </ul>
+        
+        <script>
+            let url = 'http://www.omdbapi.com/?apikey=*******&s=shawshank';
+
+            sendReq('GET', url).then(res => {
+                
+                const data = JSON.parse(res.response)
+                makeListArray(data.Search, 'list')
+            });
+        </script>
+    </body>
+</html>
+```
+
+This code prints:
+
+* The Shawshank Redemption
+
+* Shawshank: The Redeeming Feature
+
+* Hope Springs Eternal: A Look Back at 'The Shawshank Redemption'
+
+* The Shawshank Redemption: Behind the Scenes
+
+* The Shawshank Redemption: Cast Interviews
+
+* The Shawshank Redemption (Scene)
+
+* The Shawshank Reflection
+
 NOTE: The documentation is far from complete, but it is going to be updated as 
 frequently as possible 
