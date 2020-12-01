@@ -84,7 +84,7 @@ Below is a real example, with a call to imdb's API:
 ```
 
 This code prints:
-
+```
 * The Shawshank Redemption
 
 * Shawshank: The Redeeming Feature
@@ -98,6 +98,6 @@ This code prints:
 * The Shawshank Redemption (Scene)
 
 * The Shawshank Reflection
-
+```
 NOTE: The documentation is far from complete, but it is going to be updated as 
 frequently as possible 
